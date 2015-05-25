@@ -3,6 +3,8 @@
 
 PCD8544_SPI_FB lcd;
 
+#define UPDATE_PERIOD 100
+
 void setup(void) {
    lcd.begin();
    //Copyright crap...
@@ -37,5 +39,5 @@ void loop() {
   //Rendering ticks and points.
   lcd.renderAll();
   //Delay to allow for more visible lines.
-  delay(100);
+  delay(UPDATE_PERIOD);
 }
